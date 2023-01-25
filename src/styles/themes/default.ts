@@ -24,6 +24,6 @@ export const defaultTheme = {
   },
 
   yellow: {
-    500: '#FBA94C'
-  }
+    500: '#FBA94C',
+  },
 }
