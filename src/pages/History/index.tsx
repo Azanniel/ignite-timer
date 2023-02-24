@@ -9,6 +9,18 @@ import { HistoryContainer, HistoryList, Status } from './styles'
 export function History() {
   const { cycles } = useContext(CyclesContext)
 
+  const cyclesSorted = [...cycles].sort((a, b) => {
+    if (new Date(a.startDate) > new Date(b.startDate)) {
+      return -1
+    }
+
+    if (new Date(a.startDate) < new Date(b.startDate)) {
+      return 1
+    }
+
+    return 0
+  })
+
   return (
     <HistoryContainer>
       <h1>Meu histórico</h1>
@@ -25,13 +37,13 @@ export function History() {
           </thead>
 
           <tbody>
-            {cycles.map((cycle) => {
+            {cyclesSorted.map((cycle) => {
               return (
                 <tr key={cycle.id}>
                   <td>{cycle.task}</td>
                   <td>{cycle.minutesAmount} minutos</td>
                   <td>
-                    {formatDistanceToNow(cycle.startDate, {
+                    {formatDistanceToNow(new Date(cycle.startDate), {
                       addSuffix: true,
                       locale: ptBR,
                     })}

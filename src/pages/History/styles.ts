@@ -11,6 +11,8 @@ export const HistoryContainer = styled.main`
     font-size: 1.5rem;
     color: ${(props) => props.theme.gray[100]};
   }
+
+  overflow: auto;
 `
 
 export const HistoryList = styled.div`
