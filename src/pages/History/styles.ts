@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const HistoryContainer = styled.main`
+  max-height: calc(100vh - 10rem);
+
   flex: 1;
   padding: 3.5rem;
 
@@ -12,7 +14,9 @@ export const HistoryContainer = styled.main`
     color: ${(props) => props.theme.gray[100]};
   }
 
-  overflow: auto;
+  @media (max-width: 630px) {
+    padding: 1.5rem 0;
+  }
 `
 
 export const HistoryList = styled.div`

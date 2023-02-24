@@ -21,11 +21,11 @@ export function NewCycleForm() {
       />
 
       <datalist id="task-suggestions">
-        <option value="Projeto 1"></option>
-        <option value="Projeto 2"></option>
-        <option value="Projeto 3"></option>
-        <option value="Projeto 4"></option>
-        <option value="Projeto 5"></option>
+        <option value="Criação de Landing Page"></option>
+        <option value="UI Clone"></option>
+        <option value="Aplicação ReactJS"></option>
+        <option value="Aplicação React Native"></option>
+        <option value="Aplicação NodeJS"></option>
       </datalist>
 
       <label htmlFor="minutesAmount">durante</label>

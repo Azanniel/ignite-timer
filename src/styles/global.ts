@@ -21,6 +21,11 @@ export const GlobalStyle = createGlobalStyle`
     border: 3px solid ${(props) => props.theme.gray[900]};
   }
 
+  *::-webkit-scrollbar-corner {
+    background: ${(props) => props.theme.gray[900]};
+    border-end-end-radius: 6px;
+  }
+
   :focus {
     outline: 0;
     box-shadow: 0 0 0 2px ${(props) => props.theme.green[500]};
@@ -36,5 +41,11 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+  }
+
+  @media (max-width: 760px) {
+    html {
+      font-size: 85%;
+    }
   }
 `
